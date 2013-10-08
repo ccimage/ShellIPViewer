@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'ShellViewIP'
+		'ShellViewIP.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

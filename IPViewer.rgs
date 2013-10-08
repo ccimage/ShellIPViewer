@@ -1,0 +1,28 @@
+HKCR
+{
+	ShellViewIP.CIPViewer.1 = s 'CIPViewer Class'
+	{
+		CLSID = s '{C881A3F1-F127-41D0-A0C6-6598B6A105A9}'
+	}
+	ShellViewIP.CIPViewer = s 'CIPViewer Class'
+	{
+		CLSID = s '{C881A3F1-F127-41D0-A0C6-6598B6A105A9}'
+		CurVer = s 'CtxMenuExt.CContextMenuExt.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C881A3F1-F127-41D0-A0C6-6598B6A105A9} = s 'IPViewer Class'
+		{
+			ProgID = s 'ShellViewIP.CIPViewer.1'
+			VersionIndependentProgID = s 'CtxMenuExt.CIPViewer'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			TypeLib = s '{11B166AE-3BC0-4FF2-9613-13B83E24DFF2}'
+			Version = s '1.0'
+		}
+	}
+}

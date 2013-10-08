@@ -1,0 +1,35 @@
+// ShellViewIP.idl : ShellViewIP 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(ShellViewIP.tlb)和封送处理代码。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(C1605A03-256A-405A-81C8-13E43011A0ED),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IIPViewer : IDispatch{
+};
+[
+	uuid(11B166AE-3BC0-4FF2-9613-13B83E24DFF2),
+	version(1.0),
+]
+library ShellViewIPLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(C881A3F1-F127-41D0-A0C6-6598B6A105A9)		
+	]
+	coclass IPViewer
+	{
+		[default] interface IIPViewer;
+	};
+};
+
+import "shobjidl.idl";
