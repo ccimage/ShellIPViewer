@@ -1,6 +1,10 @@
 # Project Private
 *.aps
 *.user
+ShellViewIP_i.c
+ShellViewIP_i.h
+ShellViewIP_p.c
+ShellViewIP_p.h
 # Compiled Object files
 debug
 
